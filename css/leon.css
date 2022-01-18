@@ -150,15 +150,15 @@ section .sectionone .texttwo {
 }
 /* section three */
 .sectionthree .title {
-  height: 300px;
+  height: 200px;
 }
 .sectionthree .product {
   display: grid;
   height: 500px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 10px;
+  grid-gap: 50px;
+  height: fit-content;
 }
-
 .textcontain div:first-child {
   font-weight: bold;
   margin-bottom: 20px;
@@ -225,8 +225,8 @@ section .sectionone .texttwo {
 }
 /* style section four */
 .sectionfour {
- 
   background-color: #eee;
+  margin-top: 60px;
 }
 .sectionfour .title .textone {
   font-weight: bold;
@@ -250,14 +250,25 @@ section .sectionone .texttwo {
   -o-transform: translate(-50%, 0px);
 }
 .sectionfour .card img {
-  width: 200px;
+  width: 80vw;
 }
-
-
+.sectionfour .card .content {
+  width: 80vw;
+}
+/* style portfolio */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.portfolio .card {
+  margin-top: 20px;
+  background-color: white;
+}
 
 @media (min-width: 755px) {
   .container {
-    width: 600px;
+    width: 700px;
   }
   .sectiontwo .item {
     width: 45%;
@@ -275,8 +286,18 @@ section .sectionone .texttwo {
     text-align: left;
     margin-top: 0;
   }
+  .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .portfolio .card img,
+  .portfolio .card .content {
+    width: 35vw;
+  }
 }
-@media (min-width: 993px) {
+@media (min-width: 953px) {
   .container {
     width: 900px;
   }
