@@ -126,7 +126,7 @@ section .sectionone .texttwo {
   flex-wrap: wrap;
 }
 .sectiontwo .item {
-  width: 33%;
+  width: 80%;
 }
 .sectiontwo .item i {
   margin: auto;
@@ -148,30 +148,147 @@ section .sectionone .texttwo {
   line-height: 30px;
   color: rgb(124, 121, 121);
 }
-@media (max-width:755px){
-  .sectiontwo .item {
-  width: 80%;
-  }
+/* section three */
+.sectionthree .title {
+  height: 300px;
 }
-@media (min-width: 756px) {
+.sectionthree .product {
+  display: grid;
+  height: 500px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10px;
+}
+
+.textcontain div:first-child {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.sectionthree .product .image {
+  grid-area: 1/3/3/3;
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+  display: none;
+}
+.sectionthree .product .image img {
+  height: 350px;
+}
+.sectionthree .title {
+  margin: 20px auto;
+  width: fit-content;
+  position: relative;
+}
+.sectionthree .title .textone {
+  font-weight: bold;
+  color: rgb(204, 202, 202);
+  font-size: 10vw;
+  text-align: center;
+  position: relative;
+}
+.sectionthree .title .textone::after {
+  content: " don' t be busy be produtive ";
+  position: absolute;
+  bottom: 0px;
+  font-size: 2vw;
+  font-weight: 400;
+  color: black;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  -webkit-transform: translate(-50%, 0px);
+  -moz-transform: translate(-50%, 0px);
+  -ms-transform: translate(-50%, 0px);
+  -o-transform: translate(-50%, 0px);
+}
+.product .image::after {
+  content: "";
+  position: absolute;
+  width: 86px;
+  height: 446px;
+  background-color: darkslateblue;
+  top: 50%;
+  right: -43px;
+  transform: translate(0px, -50%);
+  z-index: -1;
+}
+.product .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item .textcontain div:first-child {
+  text-align: center;
+  margin-top: 20px;
+}
+.product .item i {
+  color: var(--main-color);
+  width: fit-content;
+}
+/* style section four */
+.sectionfour {
+ 
+  background-color: #eee;
+}
+.sectionfour .title .textone {
+  font-weight: bold;
+  color: rgb(204, 202, 202);
+  font-size: 10vw;
+  text-align: center;
+  position: relative;
+}
+.sectionfour .title .textone::after {
+  content: " don' t be busy be produtive ";
+  position: absolute;
+  bottom: 0px;
+  font-size: 2vw;
+  font-weight: 400;
+  color: black;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  -webkit-transform: translate(-50%, 0px);
+  -moz-transform: translate(-50%, 0px);
+  -ms-transform: translate(-50%, 0px);
+  -o-transform: translate(-50%, 0px);
+}
+.sectionfour .card img {
+  width: 200px;
+}
+
+
+
+@media (min-width: 755px) {
   .container {
     width: 600px;
   }
- 
-}
-@media (min-width: 757px) and (max-width: 992px) {
   .sectiontwo .item {
-    background-color: tomato;
-    width: 40%;
+    width: 45%;
+  }
+  .product .item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .product .item i {
+    margin-right: 20px;
+    height: 100%;
+  }
+  .item .textcontain div:first-child {
+    text-align: left;
+    margin-top: 0;
   }
 }
 @media (min-width: 993px) {
   .container {
     width: 900px;
   }
+  .sectiontwo .item {
+    width: 30%;
+  }
 }
 @media (min-width: 1200px) {
   .container {
     width: 1100px;
+  }
+  .sectionthree .product .image {
+    display: block;
   }
 }
