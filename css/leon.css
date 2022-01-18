@@ -51,7 +51,7 @@ header nav .butnav .line {
   width: 50%;
 }
 header li {
-  width: 160px;
+  width: 200px;
   height: 35px;
   padding: 10px;
   background-color: #e5e5e5;
@@ -192,6 +192,7 @@ section .sectionone .texttwo {
   font-size: 2vw;
   font-weight: 400;
   color: black;
+  width: 35vw;
   left: 50%;
   transform: translate(-50%, 0px);
   -webkit-transform: translate(-50%, 0px);
@@ -342,7 +343,7 @@ section .sectionone .texttwo {
   font-weight: bold;
 }
 /* contact style */
-.contact{
+.contact {
   text-align: center;
   background-color: #eee;
 }
@@ -368,13 +369,16 @@ section .sectionone .texttwo {
   -ms-transform: translate(-50%, 0px);
   -o-transform: translate(-50%, 0px);
 }
-.contact h1,h2,h3,div{
+.contact h1,
+.contact h2,
+.contact h3,
+.contact div {
   margin-top: 100px;
 }
-.contact h2{
+.contact h2 {
   color: var(--main-color);
 }
-.contact .final{
+.contact .final {
   background-color: blueviolet;
   color: white;
   height: 100px;
@@ -382,8 +386,7 @@ section .sectionone .texttwo {
 }
 .final span {
   color: var(--main-color);
-  font-weight: bold
-
+  font-weight: bold;
 }
 /*media queries  */
 @media (min-width: 755px) {
@@ -416,37 +419,39 @@ section .sectionone .texttwo {
   .portfolio .card .content {
     width: 35vw;
   }
-  
-@media (min-width: 953px) {
-  .container {
-    width: 900px;
+
+  @media (min-width: 953px) {
+    .container {
+      width: 900px;
+    }
+    .sectiontwo .item {
+      width: 30%;
+    }
+    .about .img {
+      margin: 0px;
+    }
+    .about .text {
+      margin: 0;
+    }
+    .about .flexdisplay {
+      display: flex;
+      justify-content: space-between;
+      margin: 30px auto;
+    }
+    .about .flexdisplay .text {
+      width: 30vw;
+    }
+    .about .img::before,
+    .about .img::after {
+      display: block;
+    }
+    @media (min-width: 1200px) {
+      .container {
+        width: 1100px;
+      }
+      .sectionthree .product .image {
+        display: block;
+      }
+    }
   }
-  .sectiontwo .item {
-    width: 30%;
-  }
-  .about .img {
-    margin: 0px;
-  }
-  .about .text {
-    margin: 0;
-  }
-  .about .flexdisplay {
-    display: flex;
-    justify-content: space-between;
-    margin: 30px auto;
-  }
-  .about .flexdisplay .text {
-    width: 30vw;
-  }
-  .about .img::before ,.about .img::after {
-    
-display: block;
 }
-@media (min-width: 1200px) {
-  .container {
-    width: 1100px;
-  }
-  .sectionthree .product .image {
-    display: block;
-  }
-}}}
