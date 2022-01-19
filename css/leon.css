@@ -21,18 +21,25 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  height: 50px;
+  height: 38px;
 }
 header nav {
   width: 40px;
   position: relative;
+  height: fit-content;
 }
 header nav ul {
   list-style: none;
   position: absolute;
-  right: 70%;
-  top: 25px;
-  visibility: hidden;
+  right: 20%;
+  top: 33px;
+  z-index: 1;
+  transition: 2s;
+  display: none;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
 }
 header nav div {
   display: flex;
@@ -55,26 +62,39 @@ header li {
   height: 35px;
   padding: 10px;
   background-color: #e5e5e5;
+}
+header li:not(li:last-child) {
   border-bottom: 2px solid #eee;
 }
-header ul .one {
-  position: relative;
-}
-header .one::after {
+
+header ul::after {
   content: "";
   position: absolute;
   width: 0;
   height: 0;
-  border: 10px solid #e5e5e5;
+  border: 18px solid #e5e5e5;
   border-top-color: transparent;
   border-left-color: transparent;
   border-right-color: transparent;
-  top: -20px;
+  top: -37px;
   right: 0px;
 }
-.butnav:hover + ul {
-  visibility: visible;
+nav:hover ul {
+  display: block;
   z-index: 5;
+}
+li a {
+  text-decoration: none;
+  display: block;
+  color: black;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+ul li:hover a {
+  padding-left: 25px;
 }
 .butnav:hover .line {
   width: 100%;
